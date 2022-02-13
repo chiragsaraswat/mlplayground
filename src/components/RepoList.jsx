@@ -5,7 +5,9 @@ const RepoList = ({ repos }) => {
   if (repos.length === 0) {
     return (
       <div className="row">
-        <p className="lead text-info">User has no Public Repositories Yet!!</p>
+        <p className="lead text-info text-center">
+          User has no Public Repositories Yet!!
+        </p>
       </div>
     );
   } else {
