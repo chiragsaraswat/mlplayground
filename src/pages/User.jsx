@@ -40,42 +40,43 @@ const User = () => {
                     <div className="card-body">
                       <h4 className="card-title">{user.name}</h4>
                       <p className="card-text text-muted">{user.login}</p>
+                      <div class="table-responsive">
+                        <table className="table " width="100%">
+                          <tbody>
+                            {user.company && (
+                              <tr>
+                                <th scope="row">Company</th>
 
-                      <table className="table " width="100%">
-                        <tbody>
-                          {user.company && (
-                            <tr>
-                              <th scope="row">Company</th>
-
-                              <td>{user.company}</td>
-                            </tr>
-                          )}
-                          {user.blog && (
-                            <tr>
-                              <th scope="row">Blog</th>
-                              <td>{user.blog}</td>
-                            </tr>
-                          )}
-                          {user.email && (
-                            <tr>
-                              <th scope="row">Email</th>
-                              <td>{user.email}</td>
-                            </tr>
-                          )}
-                          {user.location && (
-                            <tr>
-                              <th scope="row">Location</th>
-                              <td>{user.location}</td>
-                            </tr>
-                          )}
-                          {user.twitter_username && (
-                            <tr>
-                              <th scope="row">Twitter</th>
-                              <td>{user.twitter_username}</td>
-                            </tr>
-                          )}
-                        </tbody>
-                      </table>
+                                <td>{user.company}</td>
+                              </tr>
+                            )}
+                            {user.blog && (
+                              <tr>
+                                <th scope="row">Blog</th>
+                                <td>{user.blog}</td>
+                              </tr>
+                            )}
+                            {user.email && (
+                              <tr>
+                                <th scope="row">Email</th>
+                                <td>{user.email}</td>
+                              </tr>
+                            )}
+                            {user.location && (
+                              <tr>
+                                <th scope="row">Location</th>
+                                <td>{user.location}</td>
+                              </tr>
+                            )}
+                            {user.twitter_username && (
+                              <tr>
+                                <th scope="row">Twitter</th>
+                                <td>{user.twitter_username}</td>
+                              </tr>
+                            )}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -85,28 +86,29 @@ const User = () => {
                     <div className="card-header">Bio and Stats</div>
                     <div className="card-body">
                       <h6 className="card-title"> {user.bio}</h6>
+                      <div class="table-responsive">
+                        <table className="table table-primary" width="100%">
+                          <tbody>
+                            <tr>
+                              <th scope="row">Public Repos</th>
 
-                      <table className="table table-primary" width="100%">
-                        <tbody>
-                          <tr>
-                            <th scope="row">Public Repos</th>
-
-                            <td>{user.public_repos}</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Public Gists</th>
-                            <td>{user.public_gists}</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Followers</th>
-                            <td>{user.followers}</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Following</th>
-                            <td>{user.following}</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                              <td>{user.public_repos}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Public Gists</th>
+                              <td>{user.public_gists}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Followers</th>
+                              <td>{user.followers}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Following</th>
+                              <td>{user.following}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <a
                         href={user.html_url}
                         className="btn btn-success btn-block"
@@ -121,7 +123,7 @@ const User = () => {
           </section>
           <section className="p-5">
             <div className="container">
-              <h3 className="text-center display-4 mb-4">User Repositories</h3>
+              <h3 className="text-center display-6 mb-5">User Repositories</h3>
               <RepoList repos={repos} />
             </div>
           </section>

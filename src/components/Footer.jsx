@@ -17,7 +17,9 @@ const Footer = () => {
           </a>
         </div>
         <div className="container">
-          <p className="text-center">`Copyright &copy; ${year} `</p>
+          <p className="text-center text-light lead mt-3">
+            Copyright &copy; {year}
+          </p>
         </div>
       </div>
     </footer>
