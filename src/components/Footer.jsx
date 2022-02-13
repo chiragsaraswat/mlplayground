@@ -16,6 +16,9 @@ const Footer = () => {
             <i className="fa-brands fa-instagram fa-2x"></i>
           </a>
         </div>
+        <div className="container">
+          <p className="text-center">`Copyright &copy; ${year} `</p>
+        </div>
       </div>
     </footer>
   );
